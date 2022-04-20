@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO APP</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#tasks">Tasks</a></li>
+          <li><a href="#item" onclick="let taskBar = document.getElementById('black'); taskBar.style.display = 'block'">New Task</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="tasks">
+      <div id="head">
+        <ul>
+          <li>Task Name</li>
+          <li>Category</li>
+          <li>Duration</li>
+          <li>Time to begin</li>
+          <li>Time to end</li>
+        </ul>
+        <hr />
+      </div>
+      <div id="bod"><p>Tasks not found</p></div>
+      <button><a href="#item" onclick="let taskBar = document.getElementById('black'); taskBar.style.display = 'block'">Create Task</a></button>
+      <button onclick="removeTask()">Remove Task</button>
+      <button onclick="editTask()">Edit Task</button>
+      <button onclick="save()">Save</button>
+      <section id="black">
+      <h1>New Task</h1>
+      <section id="item">
+        <div id="form">
+          <label>Task Name: </label>
+          <input type="text" value="" id="taskName" class="value">
+          <label>Category: </label>
+          <select id="category" class="value">
+            <option value="Anime">Anime</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Coding">Coding</option>
+            <option value="Studying">Studying</option>
+            <option value="Other Things">Other Things</option>
+          </select>
+          <label>Duration: </label>
+          <input type="text" value="" id="duration" class="value">
+          <label>Date to begin: </label>
+          <input type="date" value="" id="begin" class="value">
+          <label>Date to end: </label>
+          <input type="date" value="" id="end" class="value">
+          <div>
+            <button id="btn" onclick="submit()">Submit</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer ><p id="footer"></p></footer>
+    <script src="main.js"></script>
+  </body>
+</html>
